@@ -6,9 +6,7 @@ This is the course project README file. The purpose of this project is to demons
 The goal is to prepare tidy data (from raw data) that can be used for later analysis.
 
 A full description of raw data is available at the [UCI Machine Learning Repository](
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones); here you can [download the dataset]
-
-(https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones); here you can [download the dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
 
 Let's see how the script run_analysis.R work.
 
