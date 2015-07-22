@@ -13,7 +13,6 @@ Let's see how the script run_analysis.R work.
 First of all I read the activity labels file and the features file (that contains variables name):
 
 '''
-# activity names
 file <- ".\\activity_labels.txt"
 anames <- read.table(file)
 anames <- as.vector(anames[,2])
