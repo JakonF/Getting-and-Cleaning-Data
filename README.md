@@ -11,7 +11,6 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 Let's see how the script run_analysis.R work.
 
 First of all I read the activity labels file and the features file (that contains variables name):
-
 <!-- -->
       # activity names
       file <- ".\\activity_labels.txt"
@@ -23,10 +22,7 @@ First of all I read the activity labels file and the features file (that contain
       cnames <- read.table(file)
       cnames <- c("subject", "activity", as.vector(cnames$V2))
 
-To merge training and test set I read, for both training and test, the raw data file, the activity file (activity performed for each record) and 
-
-the subject file (the id of the subject who performed the activity):
-
+To merge training and test set I read, for both training and test, the raw data file, the activity file (activity performed for each record) and the subject file (the id of the subject who performed the activity):
 <!-- -->
       # join training and test set
       file <- ".\\train\\X_train.txt"
@@ -43,18 +39,15 @@ the subject file (the id of the subject who performed the activity):
       colnames(dset) <- cnames
 
 Next step I select only the measurements on the mean and standard deviation for each measurement:
-
 <!-- -->
       mean_std <- c(1, 2, grep("-mean()", cnames), grep("-std()", cnames))
       dset_ms <- data.table(dset[mean_std])
 
 The conversion to a data.table object makes easier the creation of the tidy data set as we can calculate in one step the mean for each distinct occurrence of the key sucject-activity:
-
 <!-- -->
       tidy_d <- dset_ms[,lapply(.SD,mean),by="subject,activity"]
 
 Finally I write the tidy dataset to a file:
-
 <!-- -->
       file <- ".\\tidy.txt"
       write.table(tidy_d, file)
