@@ -74,3 +74,7 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 misuse. Any commercial use is prohibited.
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
+
+### Further elaboration
+
+In addition to original codebook we have extracted only the measurements on the mean and standard deviation for each measurement and we have calculated the mean of each subset-variable for each activity and each subject. The tidy dataset is made by this summarized data.
