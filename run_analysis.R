@@ -30,4 +30,4 @@ dset_ms <- data.table(dset[mean_std])
 
 tidy_d <- dset_ms[,lapply(.SD,mean),by="subject,activity"]
 file <- ".\\tidy.txt"
-write.table(tidy_d, file)
+write.table(tidy_d, file, row_names = FALSE)
